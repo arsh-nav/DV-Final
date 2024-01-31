@@ -10905,7 +10905,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background:rgba(29,128,159, 0.3);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
