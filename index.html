@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Final DV project</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.0.0/dist/simple-statistics.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#page-top">Arshia Navabakbar</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Overview</a></li>
+<!--                 <li class="sidebar-nav-item"><a href="#about">Global Trend</a></li> -->
+                <li class="sidebar-nav-item"><a href="#services">Map</a></li>
+                <li class="sidebar-nav-item"><a href="#portfolio">Scatterplot</a></li>
+                <li class="sidebar-nav-item"><a href="#contact">Boxplot</a></li>
+                <li class="sidebar-nav-item"><a href="#firstplot">StackedArea</a></li>
+                <li class="sidebar-nav-item"><a href="#secondplot">Bar Chart</a></li>
+            </ul>
+        </nav>
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <!-- <h1 class="mb-1">Stylish Portfolio</h1>
+                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3> -->
+                <h4 class="mb-1">
+                    Navigating the Evolution of Global Health: A Data-Driven Journey through Life Expectancy Trends
+                </h4>
+                <p>
+                <h5>
+                    
+                        Life expectancy is a crucial indicator of a nation's overall health and well-being, 
+                        reflecting the complex interplay of economic, social, and medical factors. 
+                        In our visualization, we explore global life expectancy trends, 
+                        investigating how different countries and regions have progressed over the years. 
+                        Our charts dive into the data to uncover patterns and disparities in life expectancy,
+                        examining the potential impacts of healthcare investments, disease prevalence, economic development,
+                        and education levels. Through a series of interactive visualizations,
+                        we aim to provide a nuanced narrative of how life expectancy has evolved,
+                        identify the success stories and ongoing challenges
+                        , and offer insights into the factors that drive longevity across the world.
+                        Join us in a data-driven exploration of the changing landscape of global health,
+                        as we seek to understand the past, present, and potential future of human lifespans.
+                    
+                </h5>
+            </p>
+                <a class="btn btn-primary btn-xl" href="#services">Find Out More</a>
+            </div>
+        </header>
+
+        <section class="content-section bg-primary text-center" id="services">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h3>
+                            Global Life Expectancy Disparities: Color-Coded World Map Analysis
+                            <br/>
+                        </h3>
+                        <p class="lead mb-5">      
+                            <h5>
+                            A world map color-coded by life expectancy. This can vividly show regional disparities in life expectancy and prompt questions about the reasons behind these differences.                  
+                            </h5>
+                        </p>
+                        
+                        <div id="cMap">
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <!-- <div id="my_dataviz_scatter"></div> -->
+        </section>
+        <!-- Callout-->
+        <section class="callout" id="portfolio">
+            <div class="container px-4 px-lg-5 text-center">
+                
+                <div class="container px-4 px-lg-5 text-center">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-lg-10">
+                            <h4>
+                                GDP and Life Expectancy Correlation: Logarithmic Analysis with Regression Trendline
+                                <br/>
+                            </h4>
+                            <p class="lead mb-5">
+                                <h5>
+                               Explore the relationship between a country's GDP and its life expectancy. A logarithmic scale for GDP can help manage the wide range of GDP values. A regression line will indicate the overall trend.
+                            </h5>
+                            </p>
+                            <div id="my_dataviz_scatter">           
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+        <!-- Portfolio-->
+        <section class="backG" id="contact">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h4>
+                            <br/>
+                            Linking Education and Longevity: Regional Schooling Years and Life Expectancy
+                            <br/>
+                        </h4>
+                        <p class="lead mb-5">
+                            <h5>
+                            Display the distribution of years of schooling by region. This can show educational disparities between regions and might correlate with health outcomes. There's a line chart integrated to allow comparison with life expectancy.
+                        </h5>
+                        </p>
+                        
+                        <div id="BoxPlot"></div>
+                    </div>
+                </div>
+                <!-- <div id="stacked_area"></div> -->
+            </div> 
+            
+        </section>
+        <!-- Call to Action-->
+        <section class="content-section bg-primary" id="firstplot">
+            <div class="container px-4 px-lg-5 text-center">
+                
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h3>
+                            <br/>
+                            Trends in Global Disease Burden
+                            <br/>
+                        </h3>
+                        <p class="lead mb-5">
+                            <h5>
+                            Illustrate the global burden of these diseases over time. Stacked areas can highlight the relative magnitude and trends of each disease.
+                        </h5>
+                        </p>
+                        <div id="stacked_area"></div>
+                    </div>
+                </div>
+                <!-- <div id="healthcareSpendingChart"></div> -->
+            </div>
+        </section>
+        <!-- Map-->
+        <div class="map" id="secondplot">
+            <div class="container px-4 px-lg-5 text-center">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-10">
+                    <h4>
+                        <br/>
+                        Comparing GDP and Expenditure Top and Bottom Life Expectancy Nations
+                        <br/>
+                    </h4>
+                    <p class="lead mb-5">
+                        <h5>
+                        Here five countries with highest average LE and five with lowest are compared in terms of their average <span class="azzuro"> GDP</span> and <span class="golden"> Expenditure</span> over the years. It suggests that countries with high LE have higher GDP but expenditure is not relevant to LE.
+                    </h5>
+                    </p>
+                    
+                    <div id="healthcareSpendingChart"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container px-4 px-lg-5">
+                <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+                    </li>
+                </ul>
+                <p class="text-muted small mb-0">Copyright &copy; Your Website 2023</p>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+      <script src="js/scripts.js"></script>
+        <script src="js/linechart.js"></script>
+        <script src="js/scatterplot.js"></script>
+        <script src="js/boxplot.js"></script>
+        <script src="js/stackedArea.js"></script>
+        <script src="js/healthSpending.js"></script>
+        <script src="js/map.js"></script>  
+    </body>
+    
+</html>
